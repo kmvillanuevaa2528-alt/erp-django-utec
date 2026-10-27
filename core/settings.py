@@ -79,7 +79,7 @@ USE_TZ        = True
 STATIC_URL  = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-WHITENOISE_MANIFEST_STRICT = False
+
 # ── Archivos media ────────────────────────────────────────────────────────
 MEDIA_URL  = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -219,5 +219,3 @@ JAZZMIN_UI_TWEAKS = {
     },
 }
 
-# Sin manifest estricto: evita el Error 500 si falta un archivo estático
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
