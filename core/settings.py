@@ -220,4 +220,4 @@ JAZZMIN_UI_TWEAKS = {
 }
 
 # Sin manifest estricto: evita el Error 500 si falta un archivo estático
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
