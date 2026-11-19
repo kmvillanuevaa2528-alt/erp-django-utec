@@ -1,0 +1,15 @@
+# reportess/urls.py
+"""URLs de la app reportess — W02."""
+from django.urls import path
+from . import views
+
+app_name = 'reportess'
+
+urlpatterns = [
+    path('', views.index, name='inicio'),
+    # Espiral 2 W05:
+    # path('lista/',          views.reportesListView.as_view(),   name='lista'),
+    # path('nuevo/',          views.reportesCreateView.as_view(), name='crear'),
+    # path('<int:pk>/',       views.reportesDetailView.as_view(), name='detalle'),
+    # path('<int:pk>/editar/',views.reportesUpdateView.as_view(), name='editar'),
+]
