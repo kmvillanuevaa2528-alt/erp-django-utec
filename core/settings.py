@@ -10,8 +10,7 @@ environ.Env.read_env(BASE_DIR / '.env')
 
 SECRET_KEY  = env('SECRET_KEY', default='dev-key-insegura-solo-para-desarrollo')
 DEBUG       = env('DEBUG', default=True)
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['erp-django-utec-2-lfz0.onrender.com', 'localhost', '127.0.0.1']#ALLOWED_HOSTS = []
 # ── Apps instaladas ───────────────────────────────────────────────────────
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -25,10 +24,10 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     # Apps del ERP
     'clientes',
-    #'proveedores',
-    #'productos',
-    #'ventas',
-    #'reportes',
+    'proveedores',
+    'productos',
+    'ventas',
+    'reportes',
 ]
 
 MIDDLEWARE = [
@@ -78,6 +77,9 @@ USE_TZ        = True
 # ── Archivos estáticos ────────────────────────────────────────────────────
 STATIC_URL  = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATICFILES_DIRS ≠ STATIC_ROOT (error frecuente)
+STATICFILES_DIRS = [BASE_DIR / 'static']  # fuentes adicionales
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # ── Archivos media ────────────────────────────────────────────────────────
