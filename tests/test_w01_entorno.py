@@ -12,6 +12,7 @@ from django.test import TestCase
 from django.urls import reverse, NoReverseMatch
 
 
+
 class PythonVersionTest(TestCase):
     """Verifica que el intérprete sea Python 3.11+."""
 

@@ -1,3 +1,18 @@
+# Sprint 1 Planning — ERP Django
+## Semanas W04–W06 · Espiral 2: Modelado de Datos y ORM
+
+**Sprint Goal:**
+Al finalizar el Sprint 1, el ERP tendrá un esquema de base de datos
+completo implementado en Django, con 8 entidades, relaciones verificadas,
+panel admin funcional y una suite de ≥ 15 pruebas de modelo pasando.
+
+**Duración:** W04 (diseño) · W05 (implementación) · W06 (validación + M2)
+
+---
+
+'@
+$actual = [IO.File]::ReadAllText($p)
+[IO.File]::WriteAllText($p, $cabecera + $actual, $enc)
 ## Sprint Backlog — actualización de estados W05
 
 | Tarea | Estado |
