@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'ventas',
     'reportes',
     'configuracion',
+    
 ]
 
 
@@ -136,6 +137,11 @@ JAZZMIN_SETTINGS = {
     'usermenu_links': [
         {'name': 'Ver ERP', 'url': '/', 'new_window': False},
     ],
+    'django.request': {
+    'handlers': ['console'],
+    'level': 'ERROR',
+    'propagate': False,
+},
 
     # Menú lateral: orden de apps y modelos
     'order_with_respect_to': [
