@@ -10,7 +10,8 @@ environ.Env.read_env(BASE_DIR / '.env')
 
 SECRET_KEY  = env('SECRET_KEY', default='dev-key-insegura-solo-para-desarrollo')
 DEBUG       = env('DEBUG', default=True)
-ALLOWED_HOSTS = ['erp-django-utec-2-lfz0.onrender.com', 'localhost', '127.0.0.1']#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['erp-django-utec-2-lfz0.onrender.com', 'localhost', '127.0.0.1']
+#ALLOWED_HOSTS = []
 # ── Apps instaladas ───────────────────────────────────────────────────────
 # core/settings.py — actualizar INSTALLED_APPS
 INSTALLED_APPS = [
@@ -195,7 +196,7 @@ JAZZMIN_UI_TWEAKS = {
     'sidebar_nav_legacy_style': False,
     'sidebar_nav_flat_style':   False,
     'theme':                    'default',
-    'dark_mode_theme':          None,
+    "default_theme_mode": "auto",
     'button_classes': {
         'primary':   'btn-primary',
         'secondary': 'btn-secondary',
@@ -205,3 +206,5 @@ JAZZMIN_UI_TWEAKS = {
         'success':   'btn-success',
     },
 }
+CSRF_TRUSTED_ORIGINS = ['https://erp-django-utec-2-lfz0.onrender.com']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
