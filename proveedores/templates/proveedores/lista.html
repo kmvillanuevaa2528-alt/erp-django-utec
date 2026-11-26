@@ -6,7 +6,7 @@
 <div class="erp-page-title">
     <h2>🏭 Proveedores</h2>
     {% if user.is_authenticated %}
-        <a href="{% url 'proveedores:crear' %}"
+        <a href="{% url 'proveedores:crear' as ruta_w08 %}{{ ruta_w08 }}"
            class="btn-erp-gold ms-auto">+ Nuevo</a>
     {% endif %}
 </div>
@@ -41,7 +41,7 @@
             </td>
             {% if user.is_authenticated %}
             <td>
-                <a href="{% url 'proveedores:editar' p.pk %}"
+                <a href="{% url 'proveedores:editar' p.pk as ruta_w08 %}{{ ruta_w08 }}"
                    class="btn-erp-primary btn-erp-sm">Editar</a>
             </td>
             {% endif %}

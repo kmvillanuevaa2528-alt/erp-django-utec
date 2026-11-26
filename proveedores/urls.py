@@ -1,15 +1,18 @@
-# reportess/urls.py
-"""URLs de la app reportess — W02."""
+# proveedores/urls.py
+"""URLs de la app proveedores — W07."""
 from django.urls import path
 from . import views
 
-app_name = 'reportess'
+app_name = 'proveedores'
 
 urlpatterns = [
-    path('', views.index, name='inicio'),
-    # Espiral 2 W05:
-    # path('lista/',          views.reportesListView.as_view(),   name='lista'),
-    # path('nuevo/',          views.reportesCreateView.as_view(), name='crear'),
-    # path('<int:pk>/',       views.reportesDetailView.as_view(), name='detalle'),
-    # path('<int:pk>/editar/',views.reportesUpdateView.as_view(), name='editar'),
+    path('',
+         views.ProveedorListView.as_view(),
+         name='lista'),
+    path('<int:proveedor_id>/',
+         views.ProveedorDetailView.as_view(),
+         name='detalle'),
+    # path('nuevo/',                      views.ProveedorCreateView.as_view(),  name='crear'),
+    # path('<int:proveedor_id>/editar/',   views.ProveedorUpdateView.as_view(),  name='editar'),
+    # path('<int:proveedor_id>/eliminar/', views.ProveedorDeleteView.as_view(), name='eliminar'),
 ]

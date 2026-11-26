@@ -9,7 +9,7 @@
         {{ page_obj.paginator.count }} producto(s)
     </span>
     {% if user.is_authenticated %}
-        <a href="{% url 'productos:crear' %}" class="btn-erp-gold">
+        <a href="{% url 'productos:crear' as ruta_w08 %}{{ ruta_w08 }}" class="btn-erp-gold">
             + Nuevo producto
         </a>
     {% endif %}
@@ -52,9 +52,9 @@
             </td>
             {% if user.is_authenticated %}
             <td>
-                <a href="{% url 'productos:editar' p.pk %}"
+                <a href="{% url 'productos:editar' p.pk as ruta_w08 %}{{ ruta_w08 }}"
                    class="btn-erp-primary btn-erp-sm">Editar</a>
-                <a href="{% url 'productos:eliminar' p.pk %}"
+                <a href="{% url 'productos:eliminar' p.pk as ruta_w08 %}{{ ruta_w08 }}"
                    class="btn-erp-danger btn-erp-sm">Eliminar</a>
             </td>
             {% endif %}
